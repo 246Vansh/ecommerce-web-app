@@ -1,0 +1,631 @@
+/* === Main === */
+.Two-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.headerM {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 24px;
+}
+
+.seperationLine{
+    max-width: 1480px;
+    color: lightgray;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.controls {
+    display: flex;
+    align-items: center;
+}
+
+.dropdown {
+    position: relative;
+}
+
+/* === Menu Button & Icons === */
+/* Scope icons within the menu button so they are 16px */
+.menu-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding: 10px;
+    color: black;
+    transition: color 0.3s ease;
+}
+
+.menu-button:hover {
+    color: #111827;
+}
+
+.menu-button .icon {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    z-index: 10;
+    margin-top: 8px;
+    width: 180px;
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 8px 0;
+    outline: none;
+    display: none;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.dropdown-menu.show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.menu-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.menu-item {
+    display: block;
+    padding: 12px 16px;
+    font-size: 14px;
+    text-decoration: none;
+    color: #111827;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.menu-item:hover {
+    background-color: #f3f4f6;
+    cursor: pointer;
+}
+
+.button {
+    border: none;
+    background: none;
+    padding: 8px;
+    margin-left: 10px;
+    color: #9CA3AF;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.button:hover {
+    color: #6B7280;
+}
+
+.Category-filterSection {
+    max-width: 300px;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-bottom: 1px solid #e5e7eb;
+    padding-left: 0.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #111827;
+}
+
+.list li {
+    margin-bottom: 1rem;
+}
+
+.list li:last-child {
+    margin-bottom: 0;
+}
+
+.list li a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.filter-container {
+    border-bottom: 1px solid #e5e7eb;
+    padding: 1.5rem 0;
+    padding-left: 0.5rem;
+}
+
+.filter-heading {
+    margin: 0;
+}
+
+.filter-button {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+    background: none;
+    padding: 1rem 0;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #6b7280;
+    cursor: pointer;
+}
+
+.filter-button:hover {
+    color: #4b5563;
+}
+
+.filter-title {
+    font-weight: 500;
+    color: #111827;
+}
+
+.filter-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+}
+
+/* Scope icons within the filter section so they are 20px */
+.filter-icon .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+.filter-section {
+    padding-top: 1.5rem;
+}
+
+.filter-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.filter-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.filter-option input {
+    width: 16px;
+    height: 16px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.filter-option input:checked {
+    background-color: #4f46e5;
+    border-color: #4f46e5;
+}
+
+.filter-option label {
+    font-size: 0.875rem;
+    color: #4b5563;
+    cursor: pointer;
+}
+
+/* === Product Grid === */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* === Product Card === */
+.product-card {
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 400px;
+}
+
+/* === Product Image === */
+.product-image {
+    width: 100%;
+    height: 180px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+/* === Product Content === */
+.product-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    width: 100%;
+    text-align: center;
+}
+
+/* === Product Title === */
+.product-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 6px;
+    height: 40px;
+    overflow: hidden;
+}
+
+/* === Product Description === */
+.product-description {
+    font-size: 14px;
+    color: #555;
+    line-height: 1.5;
+    height: 50px;
+    overflow: hidden;
+}
+
+/* === Product Info (Price, Category, Availability) === */
+.product-price,
+.product-category,
+.availability {
+    font-size: 15px;
+    font-weight: bold;
+    color: #444;
+    margin-bottom: 6px;
+}
+
+/* === Rating Section === */
+.rating {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    margin-bottom: 12px;
+}
+
+.star {
+    font-size: 20px;
+    color: lightgray;
+}
+
+.star.filled {
+    color: gold;
+}
+
+/* Quick View Button */
+.quick-view {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 15rem;
+    height: 2.2rem;
+    font-size: 15px;
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Show button on hover */
+.quick-view:hover {
+    opacity: 1;
+}
+
+
+/* -----------------------------
+   MODAL OVERLAY & ANIMATIONS
+------------------------------ */
+#quickViewModal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    animation: fadeInModal 0.3s ease;
+}
+
+@keyframes fadeInModal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* -----------------------------
+     MODAL CONTENT
+  ------------------------------ */
+.modal-content {
+    background: #fff;
+    margin: 50px auto;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 900px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    position: relative;
+    animation: slideDown 0.4s ease;
+    overflow: hidden;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* -----------------------------
+     CLOSE BUTTON
+  ------------------------------ */
+.quickCloseBtn {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 32px;
+    color: #9ca3af;
+    /* Gray-400 */
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.quickCloseBtn:hover {
+    color: #374151;
+    /* Gray-700 */
+}
+
+/* -----------------------------
+     MODAL BODY LAYOUT
+  ------------------------------ */
+.modal-body {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px;
+    gap: 30px;
+}
+
+/* Product Image: Left Column */
+.quickProductImage {
+    flex: 1 1 300px;
+    max-width: 400px;
+    width: 100%;
+    border-radius: 8px;
+    object-fit: cover;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Product Details: Right Column */
+.quickProductDetails {
+    flex: 1 1 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* -----------------------------
+     PRODUCT TITLE & PRICE
+  ------------------------------ */
+.quickProductTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-bottom: 8px;
+}
+
+.quickProductPrice {
+    font-size: 1.125rem;
+    color: #4b5563;
+    margin-bottom: 16px;
+    font-weight: 500;
+}
+
+/* -----------------------------
+     RATING SECTION
+  ------------------------------ */
+.quickRating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.quickRating svg {
+    fill: #fbbf24;
+    margin-right: 3px;
+    width: 20px;
+    height: 20px;
+}
+
+/* -----------------------------
+     COLOR & SIZE SECTIONS
+  ------------------------------ */
+.quickProductColor,
+.quickProductSize {
+    font-size: 1rem;
+    color: #374151;
+    /* Gray-700 */
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+/* Color Option Circles */
+.quickColorOption {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 2px solid #e5e7eb;
+    cursor: pointer;
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.quickColorOption:hover {
+    transform: scale(1.1);
+    border-color: #9ca3af;
+}
+
+/* Size Buttons */
+.size-btn {
+    padding: 8px 16px;
+    border: 2px solid #e5e7eb;
+    background: #fff;
+    color: #374151;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.size-btn:hover:not(.active):not(.disabled) {
+    background-color: #6366f1;
+}
+
+.size-btn.active {
+    background-color: #6366f1;
+    color: #fff;
+    border-color: #6366f1;
+}
+
+.size-btn.disabled {
+    background-color: #f3f4f6;
+    color: #9ca3af;
+    border-color: #d1d5db;
+    cursor: not-allowed;
+}
+
+/* -----------------------------
+     CALL-TO-ACTION BUTTONS
+  ------------------------------ */
+.addToBag {
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #6366f1;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+    width: 100%;
+    max-width: 370px;
+}
+
+.addToBag:hover {
+    background-color: #4f46e5;
+    /* Indigo-600 */
+}
+
+/* Secondary Button: View Full Details */
+.viewFullDetails {
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #ffffff;
+    color: #6366f1;
+    /* Indigo-500 */
+    border: 2px solid #6366f1;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: 100%;
+    max-width: 370px;
+}
+
+.viewFullDetails:hover {
+    background-color: #6366f1;
+    color: #fff;
+}
+
+/* === Pagination === */
+.pagination-container {
+    background: #ffffff;
+    max-width: 1100px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.page-button {
+    border: none;
+    background: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: #6b7280;
+    padding: 12px 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 5px;
+}
+
+.page-button:hover {
+    color: #ffffff;
+    background-color: #4f46e5;
+}
+
+.page-button.active {
+    background-color: #4f46e5;
+    color: #ffffff;
+}
+
+.page-button:disabled {
+    color: #d1d5db;
+    cursor: not-allowed;
+    background: none;
+}
+
+.page-container {
+    display: flex;
+    gap: 8px;
+}

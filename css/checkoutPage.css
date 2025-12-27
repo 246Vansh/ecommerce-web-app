@@ -1,0 +1,341 @@
+:root {
+    --primary-color: #6366f1;
+    --gray-300: #d1d5db;
+    --gray-500: #6b7280;
+    --gray-700: #374151;
+    --bg-light: #f9fafb;
+    --gray-800: #1f2937;
+    --gray-100: #f3f4f6;
+    --bg-white: #ffffff;
+
+    --padding: 2rem;
+    --radius-md: 8px;
+    --radius-lg: 1rem;
+    --transition: 0.3s ease;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.checkout-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    background-color: var(--bg-light);
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.information {
+    min-width: 600px;
+    max-width: 700px;
+}
+
+/* Headings */
+.section-heading,
+.heading {
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+/* Sub-heading */
+.sub-heading {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--gray-700);
+}
+
+/* Section wrapper */
+.section-block {
+    margin-bottom: 2.5rem;
+}
+
+/* Input styles */
+input,
+select {
+    padding: 0.75rem 1rem;
+    margin: 0.4rem 0 1rem;
+    border: 1px solid var(--gray-300);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color var(--transition);
+    background-color: #fff;
+}
+
+input:focus,
+select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.4);
+}
+
+input[type="radio"] {
+    width: auto;
+    accent-color: var(--primary-color);
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.input-group label {
+    font-weight: 600;
+    color: var(--gray-700);
+    margin-bottom: 0.5rem;
+}
+
+.input-error {
+    border: 2px solid red;
+}
+
+.name-fields,
+.city-country-row,
+.state-postal-row,
+.card-details {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.shipping-info,
+.contact-info,
+.shippingMethod,
+.payment-info {
+    background-color: var(--bg-light);
+}
+
+/* Delivery Options */
+.delivery-options {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.option, 
+.optionTwo {
+    flex: 1 1 240px;
+    border: 2px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 1.5rem;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    background-color: white;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.option:hover,
+.optionTwo:hover {
+    border-color: var(--primary-color);
+}
+
+.option.selected,
+.optionTwo.selected {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+}
+
+.option.selected::after,
+.optionTwo.selected::after {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 1.25rem;
+    height: 1.25rem;
+    border-radius: 9999px;
+    background-color: #6366f1;
+    background-image: url("data:image/svg+xml,%3Csvg fill='white' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.00039 10.2002L3.30039 7.50024L2.33372 8.46691L6.00039 12.1336L14.0004 4.13358L13.0337 3.16691L6.00039 10.2002Z'/%3E%3C/svg%3E");
+    background-size: 70% 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.delivery-type {
+    font-size: 1.125rem;
+    margin-bottom: 0.25rem;
+}
+
+.delivery-time {
+    color: #6b7280;
+    font-size: 1rem;
+}
+
+.delivery-price {
+    font-size: 1rem;
+    margin-top: 1rem;
+}
+
+/* Payment Methods */
+.payment-methods {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.payment-methods label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--gray-700);
+    cursor: pointer;
+}
+
+.payment-methods input[type="radio"] {
+    width: 1.1rem;
+    height: 1.1rem;
+}
+
+.product-summary {
+    min-width: 600px;
+    max-width: 700px;
+}
+
+.bothContainer {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1.5rem;
+}
+
+.productContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ITEM CARD */
+.checkoutItem {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 1.5rem;
+}
+
+.checkoutItem:last-child {
+    border-bottom: none;
+}
+
+/* IMAGE */
+.productImage {
+    width: 160px;
+    height: 140px;
+    object-fit: contain;
+    border-radius: 0.5rem;
+}
+
+.productDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.productTitle {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #111827;
+}
+
+.productPrice {
+    font-weight: 500;
+    font-size: 1rem;
+    color: #111827;
+}
+
+/* BLOCK THAT HOLDS LEFT & RIGHT INFO */
+.productInfoBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    gap: 1rem;
+}
+
+/* RIGHT CONTROLS */
+.productControls {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 1.25rem;
+}
+
+.quantitySelector {
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background-color: white;
+    cursor: pointer;
+}
+
+.remove-btn {
+    background: transparent;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: color 0.2s ease;
+}
+
+.remove-btn:hover {
+    color: #ef4444;
+}
+
+.removeIcon {
+    width: 20px;
+    height: 20px;
+}
+
+/* ORDER SUMMARY */
+.order-summary {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid #e5e7eb;
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.summary-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    color: #4b5563;
+}
+
+#totalBill {
+    font-size: 1.3rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e5e7eb;
+}
+
+/* Confirm Order Button */
+.confirm-order-btn {
+    margin-top: 1.5rem;
+    margin-left: 3.5rem;
+    width: 80%;
+    background-color: #6366f1;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.confirm-order-btn:hover {
+    background-color: #4f46e5;
+}

@@ -1,0 +1,296 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0 5%;
+}
+
+.image-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.multipleImage {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.4rem;
+}
+
+.image-preview img {
+    width: 600px;
+    height: 500px;
+    border-radius: 10px;
+    object-fit: contain;
+}
+
+.image-thumbnails img {
+    width: 130px;
+    height: 150px;
+    object-fit: contain;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: transform 0.2s, border 0.3s;
+}
+
+.image-thumbnails.active {
+    border: 2px solid blue;
+    opacity: 0.8;
+}
+
+.image-thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    padding: 0;
+    margin: 0;
+}
+
+.productTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #222;
+}
+
+.productPrice {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.productReviews {
+    font-size: 2rem;
+    color: blue;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.productDescription {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.productColor {
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.productMultipleColor {
+    display: flex;
+    gap: 20px;
+    /* Adjust spacing */
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+/* Outer ring */
+.outerCircle {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Inner circle */
+.innerCircle {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+/* Color styles */
+.colorBlack {
+    background-color: #333;
+}
+
+.colorWhite {
+    background-color: blue;
+}
+
+.colorGray {
+    background-color: gray;
+}
+
+/* Selected effect */
+.colorOption input:checked+.outerCircle {
+    border: 5px solid gray;
+    /* Grey border for outer circle */
+}
+
+.colorOption input:checked+.outerCircle .innerCircle {
+    border: 2px solid white;
+    /* White inner border */
+}
+
+
+.twoButton {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.add-to-bag {
+    width: 350px;
+    height: 40px;
+    font-size: 1rem;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background: blue;
+    color: white;
+}
+
+.heart-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.heart-icon {
+    width: 30px;
+    height: 30px;
+    color: black;
+}
+
+
+.features-container {
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    max-width: 400px;
+}
+
+.toggle-btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 10px 0;
+    outline: none;
+}
+
+.feature-title {
+    font-weight: bold;
+    color: #333;
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.icon-svg {
+    width: 20px;
+    height: 20px;
+    stroke: gray;
+    transition: 0.3s;
+}
+
+.hidden {
+    display: none;
+}
+
+.feature-list {
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.feature-list ul {
+    list-style: none;
+    /* Removes default bullet points */
+    padding: 0;
+    color: #444;
+    font-size: 16px;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    padding: 8px;
+    background: #fff;
+    border-radius: 6px;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.feature-list li:hover {
+    background: #e6e6ff;
+    /* Light blue hover effect */
+    transform: translateX(5px);
+}
+
+.checkmark {
+    color: #5a55fa;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+
+.nextSection {
+    max-width: 1400px;
+    color: lightgray;
+}
+
+.incentivesContainer {
+    display: flex;
+    justify-content: center;
+    padding: 6rem 1rem;
+}
+
+.incentivesGrid {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows wrapping on smaller screens */
+    justify-content: center;
+    gap: 5rem;
+    text-align: center;
+}
+
+.incentivesGrid>div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 250px;
+    /* Ensures a clean layout */
+}
+
+.incentivesGrid img {
+    display: block;
+    height: 6rem;
+    width: auto;
+    object-fit: contain;
+}
+
+.incentivesGrid h3 {
+    margin-top: 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.incentivesGrid p {
+    margin-top: 0.5rem;
+    font-size: 0.875rem;
+    color: #6B7280;
+    line-height: 1.5;
+}

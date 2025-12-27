@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Ecommerce</title>
+    <link rel="stylesheet" href="./css/checkoutPage.css" />
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+
+    <main>
+        <div class="checkout-container">
+            <!-- Section 1: Customer Info -->
+            <section class="information">
+                <h2 class="section-heading">Customer Information</h2>
+
+                <!-- Contact Info -->
+                <div class="contact-info section-block">
+                    <span class="sub-heading">Contact Information</span>
+                    <div class="input-group">
+                        <label>Email Address</label>
+                        <input type="email"  id="email"/>
+                    </div>
+                </div>
+
+                <!-- Shipping Info -->
+                <div class="shipping-info section-block">
+                    <span class="sub-heading">Shipping Information</span>
+                    <div class="name-fields">
+                        <div class="input-group">
+                            <label>First Name</label>
+                            <input type="text" id="firstName"/>
+                        </div>
+                        <div class="input-group">
+                            <label>Last Name</label>
+                            <input type="text" id="lastName"/>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Company</label>
+                        <input type="text" id="company"/>
+                    </div>
+                    <div class="input-group">
+                        <label>Address</label>
+                        <input type="text" id="address"/>
+                    </div>
+                    <div class="input-group">
+                        <label>Apartment, suite, etc.</label>
+                        <input type="text" id="apartment"/>
+                    </div>
+                    <div class="city-country-row">
+                        <div class="input-group">
+                            <label>City</label>
+                            <input type="text" id="city"/>
+                        </div>
+                        <div class="input-group">
+                            <label>Country</label>
+                            <select>
+                                <option>United States</option>
+                                <option>India</option>
+                                <option>Turkey</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="state-postal-row">
+                        <div class="input-group">
+                            <label>State/Province</label>
+                            <input type="text" id="state"/>
+                        </div>
+                        <div class="input-group">
+                            <label>Postal Code</label>
+                            <input type="text" id="postalCode"/>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label>Phone</label>
+                        <input type="text" id="phone"/>
+                    </div>
+                </div>
+
+                <!-- Delivery Options -->
+                <div class="shippingMethod section-block">
+                    <span class="sub-heading">Delivery Method</span>
+                    <div class="delivery-options">
+                        <div class="option" id="option">
+                            <span class="delivery-type">Standard</span>
+                            <span class="delivery-time">4–10 business days</span>
+                            <span class="delivery-price">$5.00</span>
+                        </div>
+                        <div class="optionTwo" id="optionTwo">
+                            <span class="delivery-type">Express</span>
+                            <span class="delivery-time">2–5 business days</span>
+                            <span class="delivery-price">$16.00</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Payment -->
+                <div class="payment-info section-block">
+                    <span class="sub-heading">Payment</span>
+                    <div class="payment-methods" id="paymentMethods">
+                        <label><input type="radio" name="payment" /> Credit Card</label>
+                        <label><input type="radio" name="payment" /> PayPal</label>
+                        <label><input type="radio" name="payment" /> eTransfer</label>
+                    </div>
+                    <div class="input-group">
+                        <label>Card Number</label>
+                        <input id="cardNumber"/>
+                    </div>
+                    <div class="input-group">
+                        <label>Name on Card</label>
+                        <input id="cardName"/>
+                    </div>
+                    <div class="card-details">
+                        <div class="input-group">
+                            <label>Expiration (MM/YY)</label>
+                            <input id="expirationDate"/>
+                        </div>
+                        <div class="input-group">
+                            <label>CVC</label>
+                            <input id="cvc"/>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Order Summary -->
+            <section class="product-summary">
+                <h2 class="section-heading">Order Summary</h2>
+                <div class="bothContainer">
+                    <div class="productContainer"></div>
+                    <div class="order-summary">
+                        <div class="summary-item" id="subTotal"><span>Subtotal</span><strong></strong></div>
+                        <div class="summary-item" id="shippingTax"><span>Shipping estimate</span><strong></strong></div>
+                        <div class="summary-item" id="productTax"><span>Tax estimate</span><strong></strong></div>
+                        <div class="summary-item" id="totalBill"><span>Order total</span><strong></strong></div>
+                    </div>
+                    <button class="confirm-order-btn">Confirm order</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div id="footer-placeholder"></div>
+</body>
+
+</html>
+
+<script src="./js/header.js"></script>
+<script src="./js/checkoutPage.js"></script>
+<script src="./js/footer.js"></script>

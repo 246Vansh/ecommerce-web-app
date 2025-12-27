@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600">
+    <title>My Ecommerce</title>
+    <link rel="stylesheet" href="./css/productPage.css">
+</head>
+
+<body>
+    <div id="header-placeholder"></div>
+    <br>
+
+    <main>
+
+        <div class="headerM">
+            <h1>New Arrivals</h1>
+            <div class="controls">
+                <div class="dropdown">
+                    <button id="menu-button" class="menu-button">Sort
+                        <svg class="icon" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div id="dropdown-menu" class="dropdown-menu" role="menu" aria-orientation="vertical"
+                        aria-labelledby="menu-button" tabindex="-1">
+                        <ul class="menu-list">
+                            <li class="menu-item active">Most Popular</li>
+                            <li class="menu-item" id="Rating">Best Rating</li>
+                            <li class="menu-item">Newest</li>
+                            <li class="menu-item" id="lowPrice">Price: Low to High</li>
+                            <li class="menu-item" id="highPrice">Price: High to Low</li>
+                        </ul>
+                    </div>
+                </div>
+                <button type="button" class="button" title="View grid">
+                    <svg class="icon" viewBox="0 0 20 20" aria-hidden="true">
+                        <path fill-rule="evenodd"
+                            d="M4.25 2A2.25 2.25 0 0 0 2 4.25v2.5A2.25 2.25 0 0 0 4.25 9h2.5A2.25 2.25 0 0 0 9 6.75v-2.5A2.25 2.25 0 0 0 6.75 2h-2.5Zm0 9A2.25 2.25 0 0 0 2 13.25v2.5A2.25 2.25 0 0 0 4.25 18h2.5A2.25 2.25 0 0 0 9 15.75v-2.5A2.25 2.25 0 0 0 6.75 11h-2.5Zm9-9A2.25 2.25 0 0 0 11 4.25v2.5A2.25 2.25 0 0 0 13.25 9h2.5A2.25 2.25 0 0 0 18 6.75v-2.5A2.25 2.25 0 0 0 15.75 2h-2.5Zm0 9A2.25 2.25 0 0 0 11 13.25v2.5A2.25 2.25 0 0 0 13.25 18h2.5A2.25 2.25 0 0 0 18 15.75v-2.5A2.25 2.25 0 0 0 15.75 11h-2.5Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <hr class="seperationLine">
+
+        <div class="Two-section">
+
+            <div class="Category-filterSection">
+
+                <ul class="list">
+                    <li>
+                        <a href="#">Totes</a>
+                    </li>
+                    <li>
+                        <a href="#">Backpacks</a>
+                    </li>
+                    <li>
+                        <a href="#">Travel Bags</a>
+                    </li>
+                    <li>
+                        <a href="#">Hip Bags</a>
+                    </li>
+                    <li>
+                        <a href="#">Laptop Sleeves</a>
+                    </li>
+                </ul>
+
+                <div class="filter-container">
+                    <h3 class="filter-heading">
+                        <button type="button" class="filter-button" onclick="toggleFilter('color')">
+                            <span class="filter-title">Color</span>
+                            <span class="filter-icon">
+                                <svg class="icon expand-icon-color" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
+                                </svg>
+                                <svg class="icon collapse-icon-color hidden" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M4 10a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 10Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </button>
+                    </h3>
+
+                    <div class="filter-section hidden" id="filter-section-color">
+                        <div class="filter-options">
+                            <div class="filter-option"><input id="color-white" name="color[]" value="white"
+                                    type="checkbox"><label for="color-white">White</label></div>
+                            <div class="filter-option"><input id="color-beige" name="color[]" value="beige"
+                                    type="checkbox"><label for="color-beige">Beige</label></div>
+                            <div class="filter-option"><input id="color-blue" name="color[]" value="blue"
+                                    type="checkbox"><label for="color-blue">Blue</label></div>
+                            <div class="filter-option"><input id="color-black" name="color[]" value="black"
+                                    type="checkbox"><label for="color-brown">Black</label></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-container">
+                    <h3 class="filter-heading">
+                        <button type="button" class="filter-button" onclick="toggleFilter('category')">
+                            <span class="filter-title">Category</span>
+                            <span class="filter-icon">
+                                <svg class="icon expand-icon-category" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
+                                </svg>
+                                <svg class="icon collapse-icon-category hidden" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M4 10a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 10Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </button>
+                    </h3>
+
+                    <div class="filter-section hidden" id="filter-section-category">
+                        <div class="filter-options" id="category-filter-container">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-container">
+                    <h3 class="filter-heading">
+                        <button type="button" class="filter-button" onclick="toggleFilter('size')">
+                            <span class="filter-title">Size</span>
+                            <span class="filter-icon">
+                                <svg class="icon expand-icon-size" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true">
+                                    <path
+                                        d="M10.75 4.75a.75.75 0 0 0-1.5 0v4.5h-4.5a.75.75 0 0 0 0 1.5h4.5v4.5a.75.75 0 0 0 1.5 0v-4.5h4.5a.75.75 0 0 0 0-1.5h-4.5v-4.5Z" />
+                                </svg>
+                                <svg class="icon collapse-icon-size hidden" viewBox="0 0 20 20" fill="currentColor"
+                                    aria-hidden="true">
+                                    <path fill-rule="evenodd"
+                                        d="M4 10a.75.75 0 0 1 .75-.75h10.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 10Z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </button>
+                    </h3>
+
+                    <div class="filter-section hidden" id="filter-section-size">
+                        <div class="filter-options">
+                            <div class="filter-option"><input id="size-xs" name="size[]" value="xs"
+                                    type="checkbox"><label for="size-xs">Extra Small</label></div>
+                            <div class="filter-option"><input id="size-s" name="size[]" value="s" type="checkbox"><label
+                                    for="size-s">Small</label></div>
+                            <div class="filter-option"><input id="size-m" name="size[]" value="m" type="checkbox"><label
+                                    for="size-m">Medium</label></div>
+                            <div class="filter-option"><input id="size-l" name="size[]" value="l" type="checkbox"><label
+                                    for="size-l">Large</label></div>
+                            <div class="filter-option"><input id="size-xl" name="size[]" value="xl"
+                                    type="checkbox"><label for="size-xl">XL</label></div>
+                            <div class="filter-option"><input id="size-2xl" name="size[]" value="2xl"
+                                    type="checkbox"><label for="size-2xl">2XL</label></div>
+                            <div class="filter-option"><input id="size-3xl" name="size[]" value="3xl"
+                                    type="checkbox"><label for="size-3xl">3XL</label></div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="Product-section">
+                <div class="grid-container">
+                </div>
+            </div>
+        </div>
+
+        <div id="quickViewModal" class="modal">
+            <div class="modal-content">
+              <span class="close-btn"></span>
+            </div>
+          </div>
+
+          <hr class="seperationLine">
+        <div class="pagination">
+            <button id="prevButton" class="page-button" onclick="changePage(currentPage - 1)">Previous</button>
+            <div class="page-container" id="pageNumbers"></div>
+            <button id="nextButton" class="page-button" onclick="changePage(currentPage + 1)">Next</button>
+        </div>
+
+    </main>
+
+    <!-- Footer Section -->
+    <div id="footer-placeholder"></div>
+
+</body>
+<script src="./js/header.js"></script>
+<script src="./js/productPage.js"></script>
+<script src="./js/footer.js"></script>

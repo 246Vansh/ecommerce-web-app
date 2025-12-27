@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600">
+    <title>My Ecommerce</title>
+    <link rel="stylesheet" href="./css/cartPage.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <div id="header-placeholder"></div>
+    <br>
+
+    <main>
+        <div>
+            <h1 class="cart-heading">Items In Your Shopping Cart </h1>
+        </div>
+        <hr class="seperationLine">
+        <div class="cartContainer">
+            <section class="cart-items"></section>
+            <section class="order-summary">
+                <h2>Order Summary</h2>
+                <div class="summary-item" id="subTotal"><span>Subtotal</span><strong></strong></div>
+                <div class="summary-item" id="shippingTax"><span>Shipping estimate</span><strong></strong></div>
+                <div class="summary-item" id="productTax"><span>Tax estimate</span><strong></strong></div>
+                <div class="summary-item" id="totalBill"><span>Order total</span><strong></strong></div>
+                <button class="checkout-button">Checkout</button>
+            </section>
+        </div>
+    </main>
+
+    <br>
+    <!-- Footer Section -->
+    <div id="footer-placeholder"></div>
+
+</body>
+<script src="./js/header.js"></script>
+<script src="./js/cartPage.js"></script>
+<script src="./js/footer.js"></script>

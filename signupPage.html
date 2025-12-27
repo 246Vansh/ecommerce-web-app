@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link rel="icon" href="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="./css/signupPage.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-container">
+            <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="Company Logo">
+            <h2>Create your account</h2>
+            <p>Not a member? <a href="#">Start a 14-day free trial</a></p>
+
+            <form id="myForm">
+                <div class="input-group">
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="email">Email address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+
+                <div class="options">
+                    <label>
+                        <input type="checkbox" name="remember-me"> Remember me
+                    </label>
+                    <a href="#">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="btn">Sign in</button>
+            </form>
+
+            <div class="divider">Or continue with</div>
+
+            <div class="social-login">
+                <a href="https://www.google.com" target="_blank">
+                    <img src="search.png">
+                    Google
+                </a>
+                <a href="#" target="_blank">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/ae/Github-desktop-logo-symbol.svg">
+                    GitHub
+                </a>
+            </div>
+        </div>
+        <div class="image-container"></div>
+    </div>
+
+    <script src="./js/signupPage.js"></script>
+</body>
+
+</html>

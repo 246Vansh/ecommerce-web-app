@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600">
+    <title>My Ecommerce</title>
+    <link rel="stylesheet" href="./css/productDetail.css">
+</head>
+
+<body>
+
+    <!-- Header Section -->
+    <div id="header-placeholder"></div>
+    <br>
+
+    <main class="container">
+        <div class="image-gallery">
+            <div class="image-preview">
+                <img id="main-image">
+            </div>
+            <div class="multipleImage">
+            </div>
+        </div>
+        <div class="productInfo" id="productInfo">
+            <div class="productTitle" id="productTitle"></div>
+            <div class="productPrice" id="productPrice"></div>
+            <div class="productReviews" id="productReviews"></div>
+            <p class="productDescription" id="productDescription"></p>
+            <div class="productColor" id="productColor">Color</div>
+            <div class="productMultipleColor" id="productMultipleColor">
+                <label class="colorOption" id="colorOption">
+                    <input type="radio" name="color" hidden>
+                    <div class="outerCircle">
+                        <div class="innerCircle colorBlack"></div>
+                    </div>
+                </label>
+                <label class="colorOption">
+                    <input type="radio" name="color" hidden>
+                    <div class="outerCircle">
+                        <div class="innerCircle colorWhite"></div>
+                    </div>
+                </label>
+                <label class="colorOption">
+                    <input type="radio" name="color" hidden>
+                    <div class="outerCircle">
+                        <div class="innerCircle colorGray"></div>
+                    </div>
+                </label>
+            </div>
+            <div class="twoButton" id="twoButton">
+                <button class="add-to-bag">Add to Bag</button>
+                <button class="heart-btn">
+                    <svg viewBox="0 0 24 24" class="heart-icon">
+                        <path
+                            d="M12 21s-7-4.35-7-10.4c0-2.485 2.015-4.5 4.5-4.5 1.54 0 2.92.79 3.5 2.02 0.58-1.23 1.96-2.02 3.5-2.02 2.485 0 4.5 2.015 4.5 4.5C19 16.65 12 21 12 21z"
+                            stroke="lightgray" stroke-width="2" fill="none" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="features-container" id="features-container">
+                <h3>
+                    <button type="button" class="toggle-btn" id="toggleButton" aria-controls="featureList"
+                        aria-expanded="false">
+                        <span class="feature-title">Features</span>
+                        <span class="icon">
+                            <svg id="plusIcon" class="icon-svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                            <svg id="minusIcon" class="icon-svg hidden" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="gray">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+                            </svg>
+                        </span>
+                    </button>
+                </h3>
+                <div class="feature-list hidden" id="featureList">
+                    <ul>
+                        <li>
+                            <span class="checkmark">✔</span> Multiple strap configurations
+                        </li>
+                        <li>
+                            <span class="checkmark">✔</span> Spacious interior with top zip
+                        </li>
+                        <li>
+                            <span class="checkmark">✔</span> Leather handle and tabs
+                        </li>
+                        <li>
+                            <span class="checkmark">✔</span> Interior dividers
+                        </li>
+                        <li>
+                            <span class="checkmark">✔</span> Stainless strap loops
+                        </li>
+                        <li>
+                            <span class="checkmark">✔</span> Double stitched construction
+                        </li>
+                        <li>
+                            <span class="checkmark">✔</span> Water-resistant
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="features-container">
+                <h3>
+                    <button type="button" class="toggle-btn" id="toggleButton" aria-controls="careList"
+                        aria-expanded="false">
+                        <span class="feature-title">Care</span>
+                        <span class="icon">
+                            <svg id="plusIcon" class="icon-svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                            <svg id="minusIcon" class="icon-svg hidden" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="gray">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+                            </svg>
+                        </span>
+                    </button>
+                </h3>
+                <div class="feature-list hidden" id="careList">
+                    <ul>
+                        <li>
+                            <span class="checkmark">✔</span> Spot clean as needed
+                        </li>
+                        <li>
+                            <span class="checkmark">✔</span> Hand wash with mild soap
+                        </li>
+                        <li>
+                            <span class="checkmark">✔</span> Machine wash interior dividers
+                        </li>
+                        <li>
+                            <span class="checkmark">✔</span> Treat handle and tabs with leather conditioner
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="features-container">
+                <h3>
+                    <button type="button" class="toggle-btn" id="toggleButton" aria-controls="shippingList"
+                        aria-expanded="false">
+                        <span class="feature-title">Shipping</span>
+                        <span class="icon">
+                            <svg id="plusIcon" class="icon-svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                            <svg id="minusIcon" class="icon-svg hidden" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="gray">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+                            </svg>
+                        </span>
+                    </button>
+                </h3>
+                <div class="feature-list hidden" id="shippingList">
+                    <ul>
+                        <li>
+                            <span class="checkmark">✔</span> Free shipping on orders over $100
+                        </li>
+                        <li>
+                            <span class="checkmark">✔</span> International shipping available
+                        </li>
+                        <li>
+                            <span class="checkmark">✔</span> Expedited shipping options
+                        </li>
+                        <li>
+                            <span class="checkmark">✔</span> Signature required upon delivery
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="features-container">
+                <h3>
+                    <button type="button" class="toggle-btn" id="toggleButton" aria-controls="returnsList"
+                        aria-expanded="false">
+                        <span class="feature-title">Returns</span>
+                        <span class="icon">
+                            <svg id="plusIcon" class="icon-svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="gray">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                            </svg>
+                            <svg id="minusIcon" class="icon-svg hidden" viewBox="0 0 24 24" stroke-width="1.5"
+                                stroke="gray">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+                            </svg>
+                        </span>
+                    </button>
+                </h3>
+                <div class="feature-list hidden" id="returnsList">
+                    <ul>
+                        <li>
+                            <span class="checkmark">✔</span> Easy return requests
+                        </li>
+                        <li>
+                            <span class="checkmark">✔</span> Pre-paid shipping label included
+                        </li>
+                        <li>
+                            <span class="checkmark">✔</span> 10% restocking fee for returns
+                        </li>
+                        <li>
+                            <span class="checkmark">✔</span> 20 day return window
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <hr class="nextSection">
+    <div class="incentivesContainer">
+        <div class="incentivesGrid">
+          <div>
+            <img src="https://tailwindcss.com/plus-assets/img/ecommerce/icons/icon-delivery-light.svg" alt="">
+            <h3>Free Shipping</h3>
+            <p>It's not actually free we just price it into the products. Someone's paying for it, and it's not us.</p>
+          </div>
+          <div>
+            <img src="https://tailwindcss.com/plus-assets/img/ecommerce/icons/icon-chat-light.svg" alt="">
+            <h3>24/7 Customer Support</h3>
+            <p>Our AI chat widget is powered by a naive series of if/else statements. Guaranteed to irritate.</p>
+          </div>
+          <div>
+            <img src="https://tailwindcss.com/plus-assets/img/ecommerce/icons/icon-fast-checkout-light.svg" alt="">
+            <h3>Fast Shopping Cart</h3>
+            <p>Look how fast that cart is going. What does this mean for the actual experience? I don't know.</p>
+          </div>
+          <div>
+            <img src="https://tailwindcss.com/plus-assets/img/ecommerce/icons/icon-gift-card-light.svg" alt="">
+            <h3>Gift Cards</h3>
+            <p>Buy them for your friends, especially if they don't like our store. Free money for us, it's great.</p>
+          </div>
+        </div>
+      </div>
+
+    <br>
+    <!-- Footer Section-->
+    <div id="footer-placeholder"></div>
+
+</body>
+<script src="./js/header.js"></script>
+<script src="./js/productDetailPage.js"></script>
+<script src="./js/footer.js"></script>

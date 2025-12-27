@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link rel="icon" href="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/loginPage.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo-container">
+            <img src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600" alt="Your Company">
+        </div>
+        <h2 class="title">Log in to your account</h2>
+        <div class="form-container">
+            <form id="myForm">
+                <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+
+                <div class="form-options">
+                    <div class="remember-me">
+                        <input type="checkbox" id="remember-me" name="remember-me">
+                        <label for="remember-me">Remember me</label>
+                    </div>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+
+                <button type="submit" class="submit-button">Sign in</button>
+            </form>
+
+            <div class="divider">
+                <span>Or continue with</span>
+            </div>
+
+            <div class="social-buttons">
+                <a href="#" class="google-button">
+                    <img src="search.png">
+                    Google
+                </a>
+                <a href="#" class="github-button">
+                    <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="GitHub">
+                    GitHub
+                </a>
+            </div>
+        </div>
+
+        <p class="footer-text">Not a member? <a href="#">Start a 14-day free trial</a></p>
+    </div>
+</body>
+<script src="./js/loginPage.js"></script>

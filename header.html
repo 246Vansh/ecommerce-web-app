@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header File</title>
+    <link rel="stylesheet" href="./css/header.css">
+</head>
+
+<body>
+
+    <!-- Free Delivery Banner -->
+    <p class="banner">🚚 Get free delivery on orders over $100</p>
+
+    <!-- Header Section -->
+    <header class="header">
+
+        <div class="first-container">
+            <!-- Logo -->
+            <div class="logo-container">
+                <a href="#">
+                    <img class="logo" loading="lazy"
+                        src="https://tailwindcss.com/plus-assets/img/logos/mark.svg?color=indigo&shade=600">
+                </a>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="nav-links">
+                <a href="./index.html">Home</a>
+                <a href="./productPage.html">Product</a>
+                <a href="./companyPage.html">Company</a>
+                <a href="./storePage.html">Stores</a>
+            </nav>
+
+        </div>
+
+        <div class="second-container">
+            <div class="navbar">
+
+                <!-- Sign in / Create Account -->
+                <div class="auth-links">
+                    <a href="./loginPage.html" id="login">Log in</a>
+                    <span class="divider"></span>
+                    <a href="./signupPage.html" id="createAccount">Create account</a>
+                </div>
+
+                <!-- Avtar -->
+                <div class="dropdown">
+                    <button class="dropdown-btn" id="userMenuBtn">
+                        <span class="circle">
+                            <span class="circle-text"></span>
+                        </span>
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="#">Your profile</a>
+                        <a href="#">Settings</a>
+                        <a id="logout" href="./index.html">Sign out</a>
+                    </div>
+                </div>
+
+                <!-- Currency Selector -->
+                <div class="currency">
+                    <a href="#" class="currency-selector">
+                        <img src="https://upload.wikimedia.org/wikipedia/en/4/41/Flag_of_India.svg" alt="Indian Flag">
+                        <span>IND</span>
+                    </a>
+                </div>
+
+                <!-- Search Icon -->
+                <div class="search-bar-container active">
+                    <img src="https://cdn4.iconfinder.com/data/icons/evil-icons-user-interface/64/magnifier-256.png"
+                        class="glass">
+                    <input type="text" class="input" placeholder="Search...">
+                    <img src="https://cdn1.iconfinder.com/data/icons/google-s-logo/150/Google_Icons-25-512.png"
+                        class="mic">
+                </div>
+
+                <!-- Cart Icon -->
+                <div class="cart">
+                    <a href="./cartPage.html">
+                        <svg class="icon" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z" />
+                        </svg>
+                        <span class="cartNumber">0</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+</body>
+
+<script src="./js/header.js"></script>
+
+</html>
